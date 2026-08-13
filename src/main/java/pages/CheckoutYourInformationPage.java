@@ -11,13 +11,16 @@ public class CheckoutYourInformationPage extends BasePage {
 
         checkoutYourInformationPageTitle = page.locator("[data-test='title']");
         cancelButton = page.locator("#cancel");
-        continueButton = page.locator("continue");
+        continueButton = page.locator("input[type='submit'][name='continue']");
         firstNameField = page.locator("#first-name");
         lastNameField = page.locator("#last-name");
         postalCodeField = page.locator("#postal-code");
         errorBlock = page.locator(".error-message-container");
         errorBlockText = page.locator("[data-test='error']");
         errorBlockXButton = page.locator(".error-button");
+        firstNameFieldErrorIcon = page.locator(".form_group:has(#first-name) svg");
+        lastNameFieldErrorIcon = page.locator(".form_group:has(#last-name) svg");
+        postalCodeFieldErrorIcon = page.locator(".form_group:has(#postal-code) svg");
     }
 
     // ==========================================
@@ -32,4 +35,7 @@ public class CheckoutYourInformationPage extends BasePage {
     protected final Locator errorBlock;
     protected final Locator errorBlockText;
     protected final Locator errorBlockXButton;
+    protected final Locator firstNameFieldErrorIcon;
+    protected final Locator lastNameFieldErrorIcon;
+    protected final Locator postalCodeFieldErrorIcon;
 }

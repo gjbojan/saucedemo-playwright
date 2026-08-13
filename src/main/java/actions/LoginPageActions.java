@@ -3,9 +3,9 @@ package actions;
 import com.microsoft.playwright.Page;
 import pages.LoginPage;
 
-public class LoginActions extends LoginPage {
+public class LoginPageActions extends LoginPage {
 
-    public LoginActions(Page page) {
+    public LoginPageActions(Page page) {
         super(page);
     }
 
@@ -37,18 +37,18 @@ public class LoginActions extends LoginPage {
     }
 
     public String getUsernameFieldText() {
-        return getPlaceHolderValue(usernameField, PLACEHOLDER);
+        return getElementAttributeValue(usernameField, PLACEHOLDER);
     }
 
     public String getPasswordFieldText() {
-        return getPlaceHolderValue(passwordField, PLACEHOLDER);
+        return getElementAttributeValue(passwordField, PLACEHOLDER);
     }
 
     public String getLoginButtonText() {
-        return getPlaceHolderValue(loginButton, VALUE);
+        return getElementAttributeValue(loginButton, VALUE);
     }
 
-    public String getErrorBlockMessageText() {
+    public String getErrorBlockText() {
         return getElementText(errorBlockText);
     }
 
@@ -59,12 +59,12 @@ public class LoginActions extends LoginPage {
         return isElementVisible(errorBlockText);
     }
 
-    public boolean isUsernameErrorIconDisplayed() {
-        return isElementVisible(usernameErrorIcon);
+    public boolean isUsernameFieldErrorIconDisplayed() {
+        return isElementVisible(usernameFieldErrorIcon);
     }
 
-    public boolean isPasswordErrorIconDisplayed() {
-        return isElementVisible(passwordErrorIcon);
+    public boolean isPasswordFieldErrorIconDisplayed() {
+        return isElementVisible(passwordFieldErrorIcon);
     }
 
     // ==========================================
@@ -78,6 +78,9 @@ public class LoginActions extends LoginPage {
         return getColorAsHex(loginButton, COLOR);
     }
 
+    // ==========================================
+    // ERROR COLOR ACTIONS
+    // ==========================================
     public String getErrorBlockBackgroundColor() {
         return getColorAsHex(errorBlock, BACKGROUND_COLOR);
     }
@@ -86,9 +89,10 @@ public class LoginActions extends LoginPage {
         return getColorAsHex(errorBlockText, COLOR);
     }
 
-    // ==========================================
-    // ERROR COLOR ACTIONS
-    // ==========================================
+    public String getErrorBlockXButtonColor() {
+        return getColorAsHex(errorBlockXButton, COLOR);
+    }
+
     public String getUsernameFieldBorderBottomErrorColor() {
         return getColorAsHex(usernameField, BORDER_BOTTOM_COLOR);
     }

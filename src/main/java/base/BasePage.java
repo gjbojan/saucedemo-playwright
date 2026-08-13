@@ -52,7 +52,7 @@ public abstract class BasePage {
         return Integer.parseInt(numberText);
     }
 
-    protected String getPlaceHolderValue(Locator locator, String propertyName) {
+    protected String getElementAttributeValue(Locator locator, String propertyName) {
         return locator.getAttribute(propertyName);
     }
 

@@ -1,6 +1,6 @@
 package base;
 
-import actions.LoginActions;
+import actions.LoginPageActions;
 import com.microsoft.playwright.*;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
@@ -14,7 +14,7 @@ public abstract class BaseTest {
     protected static Browser browser;
     protected BrowserContext browserContext;
 
-    protected LoginActions loginActions;
+    protected LoginPageActions loginPageActions;
 
     private static final String BASE_URL = "https://www.saucedemo.com/";
 
@@ -29,7 +29,7 @@ public abstract class BaseTest {
         browserContext = browser.newContext();
         page = browserContext.newPage();
 
-        loginActions = new LoginActions(page);
+        loginPageActions = new LoginPageActions(page);
     }
 
     public void navigateToPage() {
@@ -42,7 +42,7 @@ public abstract class BaseTest {
 
     public void navigateAndLoginStandardUser() {
         navigateToPage();
-        loginActions.login("standard_user", "secret_sauce");
+        loginPageActions.login("standard_user", "secret_sauce");
     }
 
     @AfterEach

@@ -16,8 +16,8 @@ public class LoginPage extends BasePage {
         errorBlock = page.locator(".error-message-container");
         errorBlockText = page.locator("[data-test='error']");
         errorBlockXButton = page.locator(".error-button");
-        usernameErrorIcon = page.locator(".form_group:has(#user-name) svg");
-        passwordErrorIcon = page.locator(".form_group:has(#password) svg");
+        usernameFieldErrorIcon = page.locator(".form_group:has(#user-name) svg");
+        passwordFieldErrorIcon = page.locator(".form_group:has(#password) svg");
     }
 
     // ==========================================
@@ -30,6 +30,6 @@ public class LoginPage extends BasePage {
     protected final Locator errorBlock;
     protected final Locator errorBlockText;
     protected final Locator errorBlockXButton;
-    protected final Locator usernameErrorIcon;
-    protected final Locator passwordErrorIcon;
+    protected final Locator usernameFieldErrorIcon;
+    protected final Locator passwordFieldErrorIcon;
 }
