@@ -35,20 +35,8 @@ public class CartPageActions extends CartPage {
     // ==========================================
     // STATE VERIFICATIONS / VISIBILITY ACTIONS
     // ==========================================
-    public boolean isSauceLabsBackpackProductRemoved() {
-        return isElementVisible(sauceLabsBackpackTitle);
-    }
-
-    public boolean isSauceLabsOnesieProductRemoved() {
-        return isElementVisible(sauceLabsOnesieTitle);
-    }
-
     public boolean isSauceLabsBackpackInCart() {
         return isElementVisible(sauceLabsBackpackTitle);
-    }
-
-    public boolean isSauceLabsOnesieInCart() {
-        return isElementVisible(sauceLabsOnesieTitle);
     }
 
     public boolean doAllProductsHaveQuantityText() {

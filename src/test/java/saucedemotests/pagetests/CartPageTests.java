@@ -38,7 +38,7 @@ public class CartPageTests extends BaseTest {
     }
 
     @Test
-    public void verifyCartProductDetailsAndRemoveButtonTest() {
+    public void verifyProductDetailsAndRemoveButtonTest() {
         assertEquals("Sauce Labs Backpack", cartPageActions.getSauceLabsBackpackTitleText());
         assertEquals(description, cartPageActions.getSauceLabsBackpackDescriptionText());
         assertEquals("$29.99", cartPageActions.getSauceLabsBackpackPriceText());
@@ -103,7 +103,7 @@ public class CartPageTests extends BaseTest {
     }
 
     @Test
-    public void cartProductDetailsAndRemoveButtonColorTest() {
+    public void productDetailsAndRemoveButtonColorTest() {
         assertEquals("#18583a", cartPageActions.getSauceLabsBackpackTitleDefaultColor());
         assertEquals("#3ddc91", cartPageActions.getSauceLabsBackpackTitleHoverColor());
 
@@ -131,7 +131,7 @@ public class CartPageTests extends BaseTest {
     }
 
     @Test
-    public void cartProductDetailsAndRemoveButtonFontTest() {
+    public void productDetailsAndRemoveButtonFontTest() {
         assertEquals("\"DM Mono\", sans-serif", cartPageActions.getSauceLabsBackpackTitleFont());
         assertEquals("20px", cartPageActions.getSauceLabsBackpackTitleFontSize());
 

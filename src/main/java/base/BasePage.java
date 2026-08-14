@@ -124,11 +124,11 @@ public abstract class BasePage {
             return true;
     }
 
-    public void sortProductsBy(Locator locator, String sortValue) {
+    protected void sortProductsBy(Locator locator, String sortValue) {
         locator.selectOption(sortValue);
     }
 
-    public boolean areElementsSortedByPriceDescending(Locator locator) {
+    protected boolean areElementsSortedByPriceDescending(Locator locator) {
         List<String> elementList = locator.allInnerTexts();
 
         for(int i=0; i<elementList.size()-1; i++) {
@@ -142,7 +142,7 @@ public abstract class BasePage {
         return true;
     }
 
-    public boolean areElementsSortedByPriceAscending(Locator locator) {
+    protected boolean areElementsSortedByPriceAscending(Locator locator) {
         List<String> elementList = locator.allInnerTexts();
 
         for(int i=0; i<elementList.size()-1; i++) {
@@ -156,9 +156,31 @@ public abstract class BasePage {
         return true;
     }
 
-    public String getElementOptionsTextByIndex(Locator dropDownLocator, int index) {
+    protected String getElementOptionsTextByIndex(Locator dropDownLocator, int index) {
         List<String> optionsTextList = dropDownLocator.locator("option").allInnerTexts();
 
         return optionsTextList.get(index);
+    }
+
+    protected String calculateExpectedTotal (List<String> elementList) {
+        double productsPrice;
+        double sumProductsPrice = 0;
+        double getTax;
+        String priceTotal;
+
+        for (int i=0; i<elementList.size(); i++) {
+            productsPrice = Double.parseDouble(elementList.get(i).replace("$", ""));
+            sumProductsPrice += productsPrice;
+        }
+
+        getTax = sumProductsPrice * 0.08;
+        getTax = Math.round(getTax * 100.0) / 100.0;
+
+        double calculatedPrice = sumProductsPrice + getTax;
+
+        priceTotal = String.format("%.2f", calculatedPrice);
+        priceTotal = priceTotal.replace(",", ".");
+
+        return "Total: $" + priceTotal;
     }
 }

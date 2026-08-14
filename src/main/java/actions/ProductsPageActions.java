@@ -142,6 +142,7 @@ public class ProductsPageActions extends ProductsPage {
     public String getPriceHighToLowSortOptionText() {
         return getElementOptionsTextByIndex(dropDownMenu, 3);
     }
+
     // ==========================================
     // GET IMAGE ACTIONS
     // ==========================================
