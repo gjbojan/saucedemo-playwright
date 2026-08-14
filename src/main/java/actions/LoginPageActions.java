@@ -55,7 +55,7 @@ public class LoginPageActions extends LoginPage {
     // ==========================================
     // STATE VERIFICATIONS / VISIBILITY ACTIONS
     // ==========================================
-    public boolean isErrorBlockDisplayed() {
+    public boolean isErrorBlockTextDisplayed() {
         return isElementVisible(errorBlockText);
     }
 

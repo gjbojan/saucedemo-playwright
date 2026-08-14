@@ -16,8 +16,8 @@ public class ProductsPageTests extends BaseTest {
     private ProductsPageActions productsPageActions;
     private HeaderAreaActions headerAreaActions;
 
-    private static final String description = "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.";
-    private static final String picture = "/assets/sauce-backpack-1200x1500-CjRW-Djj.jpg";
+    private static final String DESCRIPTION = "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.";
+    private static final String PICTURE = "/assets/sauce-backpack-1200x1500-CjRW-Djj.jpg";
 
     @BeforeEach
     public void setUpProductsPage() {
@@ -35,8 +35,8 @@ public class ProductsPageTests extends BaseTest {
     @Test
     public void verifyFeaturedProductContentAndButtonToggleTest() {
         assertEquals("Sauce Labs Backpack", productsPageActions.getSauceLabsBackpackTitleText());
-        assertEquals(description, productsPageActions.getSauceLabsBackpackDescriptionText());
-        assertEquals(picture, productsPageActions.getSauceLabsBackpackPictureUrl());
+        assertEquals(DESCRIPTION, productsPageActions.getSauceLabsBackpackDescriptionText());
+        assertEquals(PICTURE, productsPageActions.getSauceLabsBackpackPictureUrl());
         assertEquals("$29.99", productsPageActions.getSauceLabsBackpackPriceText());
         assertEquals("Add to cart", productsPageActions.getSauceLabsBackpackAddToCartButtonText());
 

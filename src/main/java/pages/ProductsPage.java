@@ -15,7 +15,7 @@ public class ProductsPage extends BasePage {
         allProductPictures = page.locator(".inventory_item_img img");
         allProductDescriptions = page.locator(".inventory_item_desc");
         allProductPrices = page.locator(".inventory_item_price");
-        allProductAddToCartButtons = page.locator(".btn btn_primary btn_small btn_inventory ");
+        allProductAddToCartButtons = page.locator(".btn.btn_primary.btn_small.btn_inventory");
         sauceLabsBackpackAddToCartButton = page.locator("#add-to-cart-sauce-labs-backpack");
         sauceLabsBackpackRemoveButton = page.locator("#remove-sauce-labs-backpack");
         sauceLabsBackpackTitle = page.locator(".inventory_item:has-text('Sauce Labs Backpack') [data-test='inventory-item-name']");

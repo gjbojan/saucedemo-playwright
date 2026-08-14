@@ -15,7 +15,7 @@ public class CartPageTests extends BaseTest {
     private ProductsPageActions productsPageActions;
     private HeaderAreaActions headerAreaActions;
 
-    private final static String description = "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.";
+    private final static String DESCRIPTION = "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.";
 
     @BeforeEach
     public void setUpCartPage() {
@@ -40,7 +40,7 @@ public class CartPageTests extends BaseTest {
     @Test
     public void verifyProductDetailsAndRemoveButtonTest() {
         assertEquals("Sauce Labs Backpack", cartPageActions.getSauceLabsBackpackTitleText());
-        assertEquals(description, cartPageActions.getSauceLabsBackpackDescriptionText());
+        assertEquals(DESCRIPTION, cartPageActions.getSauceLabsBackpackDescriptionText());
         assertEquals("$29.99", cartPageActions.getSauceLabsBackpackPriceText());
         assertTrue(cartPageActions.doAllProductsHaveQuantityText());
         assertEquals("Remove", cartPageActions.getSauceLabsBackpackRemoveButtonText());

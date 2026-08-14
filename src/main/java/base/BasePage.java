@@ -13,6 +13,9 @@ public abstract class BasePage {
         this.page = page;
     }
 
+    // ==========================================
+    // CORE STYLE & TEXT CONSTANTS
+    // ==========================================
     protected final String FONT = "font-family";
     protected final String FONT_SIZE = "font-size";
     protected final String COLOR = "color";
@@ -21,11 +24,15 @@ public abstract class BasePage {
     protected final String BORDER_COLOR = "border-color";
     protected final String PLACEHOLDER = "placeholder";
     protected final String VALUE = "value";
-    protected final String zToASort = "za";
-    protected final String aToZSort = "az";
-    protected final String pricesLowToHighSort = "lohi";
-    protected final String pricesHighToLowSort = "hilo";
 
+    protected final String Z_TO_A_SORT = "za";
+    protected final String A_TO_Z_SORT = "az";
+    protected final String PRICES_LOW_TO_HIGH_SORT = "lohi";
+    protected final String PRICES_HIGH_TO_LOW_SORT = "hilo";
+
+    // ==========================================
+    // FRAMEWORK UTILITIES
+    // ==========================================
     protected void clickElement(Locator locator) {
         locator.click();
     }

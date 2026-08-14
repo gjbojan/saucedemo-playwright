@@ -34,7 +34,7 @@ public class FooterAreaTests extends BaseTest {
     }
 
     @Test
-    public void clickableLinkedinIcon() {
+    public void clickableLinkedinIconTest() {
         assertEquals("https://www.linkedin.com/company/sauce-labs/", footerAreaActions.clickIconAndChangeToLinkedin());
     }
 

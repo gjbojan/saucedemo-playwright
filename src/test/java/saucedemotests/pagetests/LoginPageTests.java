@@ -1,6 +1,5 @@
 package saucedemotests.pagetests;
 
-import actions.LoginPageActions;
 import base.BaseTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,7 +14,6 @@ public class LoginPageTests extends BaseTest {
     @BeforeEach
     public void setUpLoginPage() {
         navigateToPage();
-        loginPageActions = new LoginPageActions(page);
     }
 
     @Test
@@ -85,7 +83,7 @@ public class LoginPageTests extends BaseTest {
         loginPageActions.clickLoginButton();
         loginPageActions.clickErrorBlockXButton();
 
-        assertFalse(loginPageActions.isErrorBlockDisplayed());
+        assertFalse(loginPageActions.isErrorBlockTextDisplayed());
         assertFalse(loginPageActions.isUsernameFieldErrorIconDisplayed());
         assertFalse(loginPageActions.isPasswordFieldErrorIconDisplayed());
     }

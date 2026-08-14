@@ -12,7 +12,7 @@ public class CheckoutCompletePageTests extends BaseTest {
 
     private CheckoutCompletePageActions checkoutCompletePageActions;
 
-    private static final String orderDispatchedText = "Your order has been dispatched, and will arrive just as fast as the pony can get there!";
+    private static final String ORDER_DISPATCHED_TEXT = "Your order has been dispatched, and will arrive just as fast as the pony can get there!";
 
     @BeforeEach
     public void setUpCheckoutCompletePage() {
@@ -27,7 +27,7 @@ public class CheckoutCompletePageTests extends BaseTest {
         assertTrue(checkoutCompletePageActions.isPonyExpressImageVisible());
         assertEquals("Checkout: Complete!", checkoutCompletePageActions.getCheckoutCompletePageTitleText());
         assertEquals("Thank you for your order!", checkoutCompletePageActions.getThankYouHeaderText());
-        assertEquals(orderDispatchedText, checkoutCompletePageActions.getOrderDispatchedText());
+        assertEquals(ORDER_DISPATCHED_TEXT, checkoutCompletePageActions.getOrderDispatchedText());
         assertEquals("Back Home", checkoutCompletePageActions.getBackHomeButtonText());
     }
 

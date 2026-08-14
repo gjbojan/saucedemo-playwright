@@ -42,19 +42,19 @@ public class ProductsPageActions extends ProductsPage {
     // SORTING ACTIONS
     // ==========================================
     public void dropDownMenuSortZToA() {
-        sortProductsBy(dropDownMenu, zToASort);
+        sortProductsBy(dropDownMenu, Z_TO_A_SORT);
     }
 
     public void dropDownMenuSortAToZ() {
-        sortProductsBy(dropDownMenu, aToZSort);
+        sortProductsBy(dropDownMenu, A_TO_Z_SORT);
     }
 
     public void dropDownMenuSortDescending() {
-        sortProductsBy(dropDownMenu, pricesHighToLowSort);
+        sortProductsBy(dropDownMenu, PRICES_HIGH_TO_LOW_SORT);
     }
 
     public void dropDownMenuSortAscending() {
-        sortProductsBy(dropDownMenu, pricesLowToHighSort);
+        sortProductsBy(dropDownMenu, PRICES_LOW_TO_HIGH_SORT);
     }
 
     // ==========================================
