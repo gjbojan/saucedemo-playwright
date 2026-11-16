@@ -10,7 +10,7 @@ public class FooterArea extends BasePage {
         super(page);
 
         footerPrivacyPolicyText = page.locator(".footer_copy");
-        twitterIcon = page.locator(".social_twitter");
+        twitterIcon = page.locator(".social_x");
         facebookIcon = page.locator(".social_facebook");
         linkedinIcon = page.locator(".social_linkedin");
     }
