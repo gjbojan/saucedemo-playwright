@@ -28,7 +28,7 @@ public abstract class BaseTest {
 
     @BeforeEach
     public void setUpBrowser() {
-        browserContext = browser.newContext();
+        browserContext = browser.newContext(new Browser.NewContextOptions().setViewportSize(1920,1080));
         page = browserContext.newPage();
 
         loginPageActions = new LoginPageActions(page);

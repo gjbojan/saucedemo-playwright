@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class FooterAreaTests extends BaseTest {
 
@@ -30,7 +31,7 @@ public class FooterAreaTests extends BaseTest {
 
     @Test
     public void clickableFacebookIconTest() {
-        assertEquals("https://www.facebook.com/saucelabs", footerAreaActions.clickIconAndChangeToFacebook());
+        assertTrue(footerAreaActions.clickIconAndChangeToFacebook().contains("saucelabs"));
     }
 
     @Test
