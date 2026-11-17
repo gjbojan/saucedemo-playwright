@@ -81,7 +81,13 @@ public abstract class BasePage {
     }
 
     protected boolean isElementVisible(Locator locator) {
-        return locator.isVisible();
+        try {
+            locator.waitFor(new Locator.WaitForOptions().setTimeout(2000));
+            return true;
+        }
+        catch (Exception e) {
+            return false;
+        }
     }
 
     protected String clickElementAndChangeToANewTab(Locator locator) {
