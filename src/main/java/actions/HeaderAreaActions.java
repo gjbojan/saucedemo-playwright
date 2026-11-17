@@ -52,6 +52,7 @@ public class HeaderAreaActions extends HeaderArea {
     }
 
     public boolean isBadgeDisplayedOnTheShoppingCartIcon() {
+        badgeOnTheShoppingCart.waitFor();
         return isElementVisible(badgeOnTheShoppingCart);
     }
 
