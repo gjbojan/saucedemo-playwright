@@ -50,6 +50,7 @@ public abstract class BasePage {
     }
 
     protected List<String> getAllElementsText(Locator locator) {
+        locator.first().waitFor();
         return locator.allInnerTexts();
     }
 
@@ -98,6 +99,7 @@ public abstract class BasePage {
     }
 
     protected boolean areAllElementsTextVisible(Locator locator) {
+        locator.first().waitFor();
         List<Locator> elementList = locator.all();
 
         if(elementList.isEmpty()) {
@@ -115,6 +117,7 @@ public abstract class BasePage {
     }
 
     protected boolean areAllElementsPictureVisible(Locator locator) {
+            locator.first().waitFor();
             List<Locator> elementList = locator.all();
 
             if(elementList.isEmpty()) {
@@ -164,7 +167,8 @@ public abstract class BasePage {
     }
 
     protected String getElementOptionsTextByIndex(Locator dropDownLocator, int index) {
-        List<String> optionsTextList = dropDownLocator.locator("option").allInnerTexts();
+        dropDownLocator.waitFor();
+        List<String> optionsTextList = dropDownLocator.locator("option").allTextContents();
 
         return optionsTextList.get(index);
     }
